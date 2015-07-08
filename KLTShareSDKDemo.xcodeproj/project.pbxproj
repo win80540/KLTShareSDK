@@ -1,0 +1,433 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		368E268B1B4CC341001672CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 368E268A1B4CC341001672CE /* main.m */; };
+		368E268E1B4CC341001672CE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 368E268D1B4CC341001672CE /* AppDelegate.m */; };
+		368E26911B4CC341001672CE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368E26901B4CC341001672CE /* ViewController.m */; };
+		368E26941B4CC341001672CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 368E26921B4CC341001672CE /* Main.storyboard */; };
+		368E26961B4CC341001672CE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 368E26951B4CC341001672CE /* Images.xcassets */; };
+		368E26991B4CC341001672CE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 368E26971B4CC341001672CE /* LaunchScreen.xib */; };
+		368E26A51B4CC341001672CE /* KLTShareSDKDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 368E26A41B4CC341001672CE /* KLTShareSDKDemoTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		368E269F1B4CC341001672CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 368E267D1B4CC341001672CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 368E26841B4CC341001672CE;
+			remoteInfo = KLTShareSDKDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		368E26851B4CC341001672CE /* KLTShareSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KLTShareSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		368E26891B4CC341001672CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		368E268A1B4CC341001672CE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		368E268C1B4CC341001672CE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		368E268D1B4CC341001672CE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		368E268F1B4CC341001672CE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		368E26901B4CC341001672CE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		368E26931B4CC341001672CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		368E26951B4CC341001672CE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		368E26981B4CC341001672CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		368E269E1B4CC341001672CE /* KLTShareSDKDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KLTShareSDKDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		368E26A31B4CC341001672CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		368E26A41B4CC341001672CE /* KLTShareSDKDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLTShareSDKDemoTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		368E26821B4CC341001672CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		368E269B1B4CC341001672CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		368E267C1B4CC341001672CE = {
+			isa = PBXGroup;
+			children = (
+				368E26871B4CC341001672CE /* KLTShareSDKDemo */,
+				368E26A11B4CC341001672CE /* KLTShareSDKDemoTests */,
+				368E26861B4CC341001672CE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		368E26861B4CC341001672CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				368E26851B4CC341001672CE /* KLTShareSDKDemo.app */,
+				368E269E1B4CC341001672CE /* KLTShareSDKDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		368E26871B4CC341001672CE /* KLTShareSDKDemo */ = {
+			isa = PBXGroup;
+			children = (
+				368E268C1B4CC341001672CE /* AppDelegate.h */,
+				368E268D1B4CC341001672CE /* AppDelegate.m */,
+				368E268F1B4CC341001672CE /* ViewController.h */,
+				368E26901B4CC341001672CE /* ViewController.m */,
+				368E26921B4CC341001672CE /* Main.storyboard */,
+				368E26951B4CC341001672CE /* Images.xcassets */,
+				368E26971B4CC341001672CE /* LaunchScreen.xib */,
+				368E26881B4CC341001672CE /* Supporting Files */,
+			);
+			path = KLTShareSDKDemo;
+			sourceTree = "<group>";
+		};
+		368E26881B4CC341001672CE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				368E26891B4CC341001672CE /* Info.plist */,
+				368E268A1B4CC341001672CE /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		368E26A11B4CC341001672CE /* KLTShareSDKDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				368E26A41B4CC341001672CE /* KLTShareSDKDemoTests.m */,
+				368E26A21B4CC341001672CE /* Supporting Files */,
+			);
+			path = KLTShareSDKDemoTests;
+			sourceTree = "<group>";
+		};
+		368E26A21B4CC341001672CE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				368E26A31B4CC341001672CE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		368E26841B4CC341001672CE /* KLTShareSDKDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 368E26A81B4CC341001672CE /* Build configuration list for PBXNativeTarget "KLTShareSDKDemo" */;
+			buildPhases = (
+				368E26811B4CC341001672CE /* Sources */,
+				368E26821B4CC341001672CE /* Frameworks */,
+				368E26831B4CC341001672CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KLTShareSDKDemo;
+			productName = KLTShareSDKDemo;
+			productReference = 368E26851B4CC341001672CE /* KLTShareSDKDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		368E269D1B4CC341001672CE /* KLTShareSDKDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 368E26AB1B4CC341001672CE /* Build configuration list for PBXNativeTarget "KLTShareSDKDemoTests" */;
+			buildPhases = (
+				368E269A1B4CC341001672CE /* Sources */,
+				368E269B1B4CC341001672CE /* Frameworks */,
+				368E269C1B4CC341001672CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				368E26A01B4CC341001672CE /* PBXTargetDependency */,
+			);
+			name = KLTShareSDKDemoTests;
+			productName = KLTShareSDKDemoTests;
+			productReference = 368E269E1B4CC341001672CE /* KLTShareSDKDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		368E267D1B4CC341001672CE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "田凯";
+				TargetAttributes = {
+					368E26841B4CC341001672CE = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					368E269D1B4CC341001672CE = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 368E26841B4CC341001672CE;
+					};
+				};
+			};
+			buildConfigurationList = 368E26801B4CC341001672CE /* Build configuration list for PBXProject "KLTShareSDKDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 368E267C1B4CC341001672CE;
+			productRefGroup = 368E26861B4CC341001672CE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				368E26841B4CC341001672CE /* KLTShareSDKDemo */,
+				368E269D1B4CC341001672CE /* KLTShareSDKDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		368E26831B4CC341001672CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				368E26941B4CC341001672CE /* Main.storyboard in Resources */,
+				368E26991B4CC341001672CE /* LaunchScreen.xib in Resources */,
+				368E26961B4CC341001672CE /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		368E269C1B4CC341001672CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		368E26811B4CC341001672CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				368E26911B4CC341001672CE /* ViewController.m in Sources */,
+				368E268E1B4CC341001672CE /* AppDelegate.m in Sources */,
+				368E268B1B4CC341001672CE /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		368E269A1B4CC341001672CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				368E26A51B4CC341001672CE /* KLTShareSDKDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		368E26A01B4CC341001672CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 368E26841B4CC341001672CE /* KLTShareSDKDemo */;
+			targetProxy = 368E269F1B4CC341001672CE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		368E26921B4CC341001672CE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				368E26931B4CC341001672CE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		368E26971B4CC341001672CE /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				368E26981B4CC341001672CE /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		368E26A61B4CC341001672CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		368E26A71B4CC341001672CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		368E26A91B4CC341001672CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KLTShareSDKDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		368E26AA1B4CC341001672CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KLTShareSDKDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		368E26AC1B4CC341001672CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KLTShareSDKDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KLTShareSDKDemo.app/KLTShareSDKDemo";
+			};
+			name = Debug;
+		};
+		368E26AD1B4CC341001672CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KLTShareSDKDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KLTShareSDKDemo.app/KLTShareSDKDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		368E26801B4CC341001672CE /* Build configuration list for PBXProject "KLTShareSDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				368E26A61B4CC341001672CE /* Debug */,
+				368E26A71B4CC341001672CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		368E26A81B4CC341001672CE /* Build configuration list for PBXNativeTarget "KLTShareSDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				368E26A91B4CC341001672CE /* Debug */,
+				368E26AA1B4CC341001672CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		368E26AB1B4CC341001672CE /* Build configuration list for PBXNativeTarget "KLTShareSDKDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				368E26AC1B4CC341001672CE /* Debug */,
+				368E26AD1B4CC341001672CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 368E267D1B4CC341001672CE /* Project object */;
+}
