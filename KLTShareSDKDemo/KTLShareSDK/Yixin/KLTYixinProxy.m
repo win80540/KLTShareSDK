@@ -115,18 +115,31 @@ NSString * const kYixinSceneTypeKey = @"Yixin_scene_type_key";
     {
         SendMessageToYXResp *sendResp = (SendMessageToYXResp *)resp;
         NSLog(@"%ld, %@", (long)sendResp.code, sendResp.errDescription);
+        if (sendResp.code != kYXRespSuccess) {
+            doneBlock(nil, [NSError errorWithDomain:kYixinErrorDomain code:sendResp.code userInfo:@{NSLocalizedDescriptionKey: sendResp.errDescription ?: @"分享失败"}]);
+        }else{
+            doneBlock(nil,nil);
+        }
     }else if([resp isKindOfClass:[SendOAuthToYXResp class]]){//kYXOAuthMessageResp
         if(resp.code == kYXRespSuccess){
             SendOAuthToYXResp *oauthresp = (SendOAuthToYXResp *)resp;
             [self getYixinUserInfoWithCode:oauthresp.authCode completed:doneBlock];
-//          NSString *oauthcode = [NSString stringWithFormat:@"code:%@\nstate:%@\nexpireseconds:%lldl", oauthresp.authCode, oauthresp.state, oauthresp.exprieSeonds];
+            //          NSString *oauthcode = [NSString stringWithFormat:@"code:%@\nstate:%@\nexpireseconds:%lldl", oauthresp.authCode, oauthresp.state, oauthresp.exprieSeonds];
             
         }else{
             doneBlock(nil, [NSError errorWithDomain:kYixinErrorDomain
                                                code:resp.code
                                            userInfo:@{NSLocalizedDescriptionKey: @"微信授权失败"}]);
         }
+    }else{
+        if (resp.code != kYXRespSuccess) {
+            doneBlock(nil, [NSError errorWithDomain:kYixinErrorDomain code:resp.code userInfo:@{NSLocalizedDescriptionKey: resp.errDescription ?: @"分享失败"}]);
+        }else{
+            doneBlock(nil,nil);
+        }
     }
+    
+    
 }
 - (void)getYixinUserInfoWithCode:(NSString *)code completed:(KLTShareCompletedBlock)completedBlock
 {
