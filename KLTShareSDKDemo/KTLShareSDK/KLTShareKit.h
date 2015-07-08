@@ -33,7 +33,6 @@ typedef void (^KLTShareCompletedBlock)(id __nullable result, NSError * __nullabl
 
 - (void)registerWithConfiguration:(NSDictionary * __nonnull)configuration;
 - (BOOL)handleOpenURL:(NSURL * __nullable)url;
-- (void)auth:(KLTShareCompletedBlock __nullable)completedBlock;
 - (BOOL)isInstalled;
 - (void)share:(KLTMessage * __nonnull)message completed:(KLTShareCompletedBlock __nullable)compltetedBlock;
 
@@ -76,16 +75,6 @@ typedef void (^KLTShareCompletedBlock)(id __nullable result, NSError * __nullabl
  */
 - (BOOL)handleOpenURL:(NSURL * __nullable)url;
 
-/**
- @brief 通过第三方授权登录。
- 
- @discussion 通过不同的 KLTShareType 来授权不同的第三方登录。其中 QZone 统一使用 KLTShareTypeQQ 授权。
- 
- @param type 第三方的类型，必需。参见：KLTShareType 。
- @param completedBlock 当登录授权过程结束后，成功或失败都会回调。 参见：KLTShareCompletedBlock
- */
-
-- (void)authWithName:(NSString * __nonnull)name completed:(KLTShareCompletedBlock __nullable)completedBlock;
 
 /** 
  @brief 判断对应第三方 App 是否被安装。

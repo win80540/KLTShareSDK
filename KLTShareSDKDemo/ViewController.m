@@ -31,29 +31,9 @@
   // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)wechatLoginAction:(UIButton *)sender
-{
-  [self loginWithType:kKLTShareTypeWechat];
-}
 
-- (IBAction)weiboLoginAction:(UIButton *)sender
-{
-  [self loginWithType:kKLTShareTypeWeibo];
-}
 
-- (IBAction)qqLoginAction:(UIButton *)sender
-{
-  [self loginWithType:kKLTShareTypeQQ];
-}
 
-- (void)loginWithType:(NSString *)type
-{
-  [[KLTShareKit sharedInstance] authWithName:type
-                                completed:^(id result, NSError *error) {
-                                  [self showText:result];
-                                  NSLog(@"error: %@", error);
-                                }];
-}
 
 - (IBAction)shareTextToWeiboAction:(id)sender
 {
@@ -132,10 +112,6 @@
 
 #pragma mark - Yixin
 
-- (IBAction)yixinLoginAction:(UIButton *)sender
-{
-    [self loginWithType:kKLTShareTypeYixin];
-}
 - (IBAction)shareTextToYixin:(id)sender
 {
     [self shareMessage:[self generateTextMessage] type:kKLTShareTypeYixin];

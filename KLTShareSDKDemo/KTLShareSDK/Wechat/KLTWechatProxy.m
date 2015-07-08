@@ -41,16 +41,6 @@ NSString * const kWechatSceneTypeKey = @"wechat_scene_type_key";
   [WXApi registerApp:self.wechatAppId];
 }
 
-- (void)auth:(KLTShareCompletedBlock __nullable)completedBlock
-{
-  self.block = completedBlock;
-
-  SendAuthReq *request = [[SendAuthReq alloc] init];
-  request.scope = @"snsapi_message,snsapi_userinfo,snsapi_friend,snsapi_contact";
-  request.state = @"wechat_auth_login_liulishuo";
-
-  [WXApi sendReq:request];
-}
 
 - (void)share:(KLTMessage * __nonnull)message completed:(KLTShareCompletedBlock __nullable)compltetedBlock
 {
@@ -132,83 +122,6 @@ NSString * const kWechatSceneTypeKey = @"wechat_scene_type_key";
       }
     }
   }
-  else if([resp isKindOfClass:[SendAuthResp class]])
-  {
-    SendAuthResp *temp = (SendAuthResp*)resp;
-    if (temp.code)
-    {
-      [self getWechatUserInfoWithCode:temp.code completed:doneBlock];
-    }
-    else
-    {
-      if (doneBlock)
-      {
-        doneBlock(nil, [NSError errorWithDomain:kWechatErrorDomain
-                                           code:temp.errCode
-                                       userInfo:@{NSLocalizedDescriptionKey: @"微信授权失败"}]);
-      }
-    }
-
-  }
-}
-
-- (void)getWechatUserInfoWithCode:(NSString *)code completed:(KLTShareCompletedBlock)completedBlock
-{
-  [self wechatAuthRequestWithPath:@"oauth2/access_token"
-                           params:@{@"appid": self.wechatAppId,
-                                    @"secret": self.wechatSecret,
-                                    @"code": code,
-                                    @"grant_type": @"authorization_code"}
-                        complated:^(NSDictionary *result, NSError *error) {
-                          if (result)
-                          {
-                            NSString *openId = result[@"openid"];
-                            NSString *accessToken = result[@"access_token"];
-                            if (openId && accessToken)
-                            {
-                              [self wechatAuthRequestWithPath:@"userinfo"
-                                                       params:@{@"openid": openId,
-                                                                @"access_token": accessToken}
-                                                    complated:^(NSDictionary *result, NSError *error) {
-                                                      DTUser *dtUser = nil;
-                                                      if (result[@"unionid"])
-                                                      {
-                                                        dtUser = [[DTUser alloc] init];
-                                                        dtUser.uid = result[@"unionid"];
-                                                        dtUser.gender = [result[@"sex"] integerValue] == 1 ? @"male" : @"female";
-                                                        dtUser.nick = result[@"nickname"];
-                                                        dtUser.avatar = result[@"headimgurl"];
-                                                        dtUser.provider = @"wechat";
-                                                        dtUser.rawData = result;
-                                                      }
-
-                                                      if (completedBlock)
-                                                      {
-                                                        completedBlock(dtUser, error);
-                                                      }
-                                                    }];
-                              return;
-                            }
-                          }
-
-                          if (completedBlock)
-                          {
-                            completedBlock(result, error);
-                          }
-                        }];
-}
-
-#pragma mark - Http Request
-
-- (void)wechatAuthRequestWithPath:(NSString *)path
-                           params:(NSDictionary *)params
-                        complated:(KLTShareCompletedBlock)completedBlock
-{
-  NSURL *baseURL = [NSURL URLWithString:@"https://api.weixin.qq.com/sns"];
-  [ShareSDKHttp requestWithUrl:[baseURL URLByAppendingPathComponent:path]
-                mehtod:@"GET"
-                params:params
-             complated:completedBlock];
 }
 
 
