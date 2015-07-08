@@ -28,11 +28,11 @@
 		368E27291B4CC7CF001672CE /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 368E27281B4CC7CF001672CE /* libc++.dylib */; };
 		368E272B1B4CC814001672CE /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 368E272A1B4CC814001672CE /* libz.dylib */; };
 		368E27321B4CC887001672CE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 368E272D1B4CC887001672CE /* AppDelegate.m */; };
-		368E27331B4CC887001672CE /* IMG_0965_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 368E272E1B4CC887001672CE /* IMG_0965_thumb.png */; };
-		368E27341B4CC887001672CE /* IMG_0965.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 368E272F1B4CC887001672CE /* IMG_0965.jpg */; };
 		368E27351B4CC887001672CE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368E27311B4CC887001672CE /* ViewController.m */; };
 		368E27371B4CC89A001672CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 368E27361B4CC89A001672CE /* Main.storyboard */; };
 		368E273A1B4CD786001672CE /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 368E27391B4CD786001672CE /* ImageIO.framework */; };
+		368E273C1B4D123B001672CE /* IMG_Cat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 368E273B1B4D123B001672CE /* IMG_Cat.jpg */; };
+		368E273E1B4D12AE001672CE /* IMG_Cat_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 368E273D1B4D12AE001672CE /* IMG_Cat_thumb.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,13 +97,13 @@
 		368E272A1B4CC814001672CE /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		368E272C1B4CC887001672CE /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		368E272D1B4CC887001672CE /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		368E272E1B4CC887001672CE /* IMG_0965_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_0965_thumb.png; sourceTree = "<group>"; };
-		368E272F1B4CC887001672CE /* IMG_0965.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0965.jpg; sourceTree = "<group>"; };
 		368E27301B4CC887001672CE /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		368E27311B4CC887001672CE /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		368E27361B4CC89A001672CE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		368E27381B4CC937001672CE /* KLTShareSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLTShareSDK.h; sourceTree = "<group>"; };
 		368E27391B4CD786001672CE /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		368E273B1B4D123B001672CE /* IMG_Cat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_Cat.jpg; sourceTree = "<group>"; };
+		368E273D1B4D12AE001672CE /* IMG_Cat_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_Cat_thumb.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,8 +162,8 @@
 				368E27361B4CC89A001672CE /* Main.storyboard */,
 				368E272C1B4CC887001672CE /* AppDelegate.h */,
 				368E272D1B4CC887001672CE /* AppDelegate.m */,
-				368E272E1B4CC887001672CE /* IMG_0965_thumb.png */,
-				368E272F1B4CC887001672CE /* IMG_0965.jpg */,
+				368E273B1B4D123B001672CE /* IMG_Cat.jpg */,
+				368E273D1B4D12AE001672CE /* IMG_Cat_thumb.png */,
 				368E27301B4CC887001672CE /* ViewController.h */,
 				368E27311B4CC887001672CE /* ViewController.m */,
 				368E26EA1B4CC4B8001672CE /* KTLShareSDK */,
@@ -389,12 +389,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				368E27331B4CC887001672CE /* IMG_0965_thumb.png in Resources */,
-				368E27341B4CC887001672CE /* IMG_0965.jpg in Resources */,
 				368E26991B4CC341001672CE /* LaunchScreen.xib in Resources */,
+				368E273C1B4D123B001672CE /* IMG_Cat.jpg in Resources */,
 				368E27371B4CC89A001672CE /* Main.storyboard in Resources */,
 				368E26961B4CC341001672CE /* Images.xcassets in Resources */,
 				368E27201B4CC4B8001672CE /* WeiboSDK.bundle in Resources */,
+				368E273E1B4D12AE001672CE /* IMG_Cat_thumb.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

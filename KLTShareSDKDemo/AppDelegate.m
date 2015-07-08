@@ -35,7 +35,7 @@
                                                             kKLTShareTypeQQ:     @{
                                                                     kKLTShareAppIdKey: @"222222"},
                                                             kKLTShareTypeYixin:  @{
-                                                                    kKLTShareAppIdKey: @"yxbbd0e8b3dce64e02bab42437becc4384",
+                                                                    kKLTShareAppIdKey: @"yx087f6b7e05b241f9b07549f563802cb1",
                                                                     kKLTShareAppSecretKey: @"db426a9829e4b49a0dcac7b4162da6b6"}
                                                             }];
 }

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "KLTShareKit.h"
+#import "YXApiObject.h"
 @class YXMediaMessage;
 
 extern NSString   * __nonnull  const kKLTShareTypeYixin;

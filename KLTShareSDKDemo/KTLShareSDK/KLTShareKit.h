@@ -13,6 +13,16 @@ extern NSString * __nonnull const kKLTShareAppSecretKey;
 extern NSString * __nonnull const kKLTShareAppRedirectUrlKey;
 extern NSString * __nonnull const kKLTShareAppDebugModeKey;
 
+/*! @brief 请求发送场景
+ *
+ */
+enum KLTShareScene {
+    KLTShareSceneSession  = 0,        /**< 聊天界面    */
+    KLTShareSceneTimeline = 1,        /**< 朋友圈      */
+    KLTShareSceneFavorite = 2,        /**< 收藏       */
+};
+
+
 @class KLTMessage;
 
 typedef void (^KLTShareCompletedBlock)(id __nullable result, NSError * __nullable error);
