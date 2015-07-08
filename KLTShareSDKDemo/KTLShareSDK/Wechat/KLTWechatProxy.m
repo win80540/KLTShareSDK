@@ -95,33 +95,35 @@ NSString * const kWechatSceneTypeKey = @"wechat_scene_type_key";
 
 - (void)onResp:(BaseResp*)resp
 {
-  KLTShareCompletedBlock doneBlock = self.block;
-  self.block = nil;
-
-  if (resp.errCode != WXSuccess)
-  {
-    if (doneBlock)
+    KLTShareCompletedBlock doneBlock = self.block;
+    self.block = nil;
+    
+    if([resp isKindOfClass:[SendMessageToWXResp class]])
     {
-      doneBlock(nil, [NSError errorWithDomain:kWechatErrorDomain code:resp.errCode userInfo:@{NSLocalizedDescriptionKey: resp.errStr ?: @"取消"}]);
+        if (doneBlock)
+        {
+            if (resp.errCode != WXSuccess)
+            {
+                doneBlock(nil, [NSError errorWithDomain:kWechatErrorDomain code:resp.errCode userInfo:@{NSLocalizedDescriptionKey: resp.errStr ?: @"分享失败"}]);
+            }
+            else
+            {
+                doneBlock(nil, nil);
+            }
+        }
+    }else {
+        if (resp.errCode != WXSuccess)
+        {
+            if (doneBlock)
+            {
+                doneBlock(nil, [NSError errorWithDomain:kWechatErrorDomain code:resp.errCode userInfo:@{NSLocalizedDescriptionKey: resp.errStr ?: @"取消"}]);
+            }
+            
+            return;
+        }else{
+            doneBlock(nil,nil);
+        }
     }
-
-    return;
-  }
-
-  if([resp isKindOfClass:[SendMessageToWXResp class]])
-  {
-    if (doneBlock)
-    {
-      if (resp.errCode != WXSuccess)
-      {
-        doneBlock(nil, [NSError errorWithDomain:kWechatErrorDomain code:resp.errCode userInfo:@{NSLocalizedDescriptionKey: resp.errStr ?: @"分享失败"}]);
-      }
-      else
-      {
-        doneBlock(nil, nil);
-      }
-    }
-  }
 }
 
 

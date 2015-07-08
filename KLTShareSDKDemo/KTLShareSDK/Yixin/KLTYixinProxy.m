@@ -85,11 +85,23 @@ NSString * const kYixinSceneTypeKey = @"Yixin_scene_type_key";
 }
 
 - (void)onReceiveResponse: (YXBaseResp *)resp {
+    KLTShareCompletedBlock doneBlock = self.block;
     self.block = nil;
     if([resp isKindOfClass:[SendMessageToYXResp class]])
     {
         SendMessageToYXResp *sendResp = (SendMessageToYXResp *)resp;
         NSLog(@"%ld, %@", (long)sendResp.code, sendResp.errDescription);
+        if (sendResp.code != kYXRespSuccess) {
+            doneBlock(nil, [NSError errorWithDomain:kYixinErrorDomain code:sendResp.code userInfo:@{NSLocalizedDescriptionKey: sendResp.errDescription ?: @"分享失败"}]);
+        }else{
+            doneBlock(nil,nil);
+        }
+    }else{
+        if (resp.code != kYXRespSuccess) {
+            doneBlock(nil, [NSError errorWithDomain:kYixinErrorDomain code:resp.code userInfo:@{NSLocalizedDescriptionKey: resp.errDescription ?: @"分享失败"}]);
+        }else{
+            doneBlock(nil,nil);
+        }
     }
 }
 
