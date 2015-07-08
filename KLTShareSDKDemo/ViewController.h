@@ -1,9 +1,9 @@
 //
 //  ViewController.h
-//  KLTShareSDKDemo
+//  KLTShare
 //
-//  Created by 田凯 on 15/7/8.
-//  Copyright (c) 2015年 田凯. All rights reserved.
+//  Created by Cloud Dai on 11/5/15.
+//  Copyright (c) 2015 Cloud Dai. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
