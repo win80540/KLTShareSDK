@@ -86,53 +86,62 @@ NSString * const kTencentQQSceneTypeKey = @"KLTShare_tencent_qq_scene_type";
 
 - (NSString *)handleQQSendResult:(QQApiSendResultCode)sendResult
 {
-  NSString *errorMessage = nil;
-  switch (sendResult)
-  {
-    case EQQAPIAPPNOTREGISTED:
+    NSString *errorMessage = nil;
+    switch (sendResult)
     {
-      errorMessage = @"App 未注册";
-
-      break;
+        case EQQAPIAPPNOTREGISTED:
+        {
+            errorMessage = @"App 未注册";
+            
+            break;
+        }
+            
+        case EQQAPIMESSAGECONTENTINVALID:
+        case EQQAPIMESSAGECONTENTNULL:
+        case EQQAPIMESSAGETYPEINVALID:
+        {
+            errorMessage = @"发送参数错误";
+            
+            break;
+        }
+            
+        case EQQAPIQQNOTINSTALLED:
+        {
+            errorMessage = @"未安装手机 QQ";
+            
+            break;
+        }
+            
+        case EQQAPIQQNOTSUPPORTAPI:
+        {
+            errorMessage = @"API 接口不支持";
+            
+            break;
+        }
+            
+        case EQQAPISENDFAILD:
+        {
+            errorMessage = @"发送失败";
+            
+            break;
+        }
+        case EQQAPIQZONENOTSUPPORTTEXT:{
+            errorMessage= @"qzone分享不支持text类型分享";
+            
+            break;
+        }
+        case EQQAPIQZONENOTSUPPORTIMAGE:{
+            errorMessage= @"qzone分享不支持image类型分享";
+            
+            break;
+        }
+        default:
+        {
+            break;
+        }
     }
-
-    case EQQAPIMESSAGECONTENTINVALID:
-    case EQQAPIMESSAGECONTENTNULL:
-    case EQQAPIMESSAGETYPEINVALID:
-    {
-      errorMessage = @"发送参数错误";
-
-      break;
-    }
-
-    case EQQAPIQQNOTINSTALLED:
-    {
-      errorMessage = @"未安装手机 QQ";
-
-      break;
-    }
-
-    case EQQAPIQQNOTSUPPORTAPI:
-    {
-      errorMessage = @"API 接口不支持";
-
-      break;
-    }
-
-    case EQQAPISENDFAILD:
-    {
-      errorMessage = @"发送失败";
-
-      break;
-    }
-
-    default:
-    {
-      break;
-    }
-  }
-
-  return errorMessage;
+    
+    return errorMessage;
 }
 
 
