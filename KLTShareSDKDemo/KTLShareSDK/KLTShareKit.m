@@ -78,21 +78,7 @@ static NSString * __nonnull const kKLTShareErrorKeyUnKnowApp = @"未知应用";
   return success;
 }
 
-- (void)authWithName:(NSString * __nonnull)name completed:(KLTShareCompletedBlock __nullable)completedBlock
-{
-  id<KLTShareProxyProtocol> proxy = self.proxyObjects[name];
-  if (proxy)
-  {
-    [proxy auth:completedBlock];
-  }
-  else
-  {
-    if (completedBlock)
-    {
-      completedBlock(nil, [NSError errorWithDomain:kKLTShareAppErrorDomainKey code:-1024 userInfo:@{NSLocalizedDescriptionKey: kKLTShareErrorKeyUnKnowApp}]);
-    }
-  }
-}
+
 
 - (void)share:(KLTMessage * __nonnull)message name:(NSString * __nonnull)name completed:(KLTShareCompletedBlock __nullable)completedBlock
 {

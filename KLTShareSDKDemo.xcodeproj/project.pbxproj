@@ -33,6 +33,7 @@
 		368E273A1B4CD786001672CE /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 368E27391B4CD786001672CE /* ImageIO.framework */; };
 		368E273C1B4D123B001672CE /* IMG_Cat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 368E273B1B4D123B001672CE /* IMG_Cat.jpg */; };
 		368E273E1B4D12AE001672CE /* IMG_Cat_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 368E273D1B4D12AE001672CE /* IMG_Cat_thumb.png */; };
+		36D82C431B6F423200C9A90D /* KLTSMSProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D82C421B6F423200C9A90D /* KLTSMSProxy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,8 @@
 		368E27391B4CD786001672CE /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		368E273B1B4D123B001672CE /* IMG_Cat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_Cat.jpg; sourceTree = "<group>"; };
 		368E273D1B4D12AE001672CE /* IMG_Cat_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_Cat_thumb.png; sourceTree = "<group>"; };
+		36D82C411B6F423200C9A90D /* KLTSMSProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLTSMSProxy.h; sourceTree = "<group>"; };
+		36D82C421B6F423200C9A90D /* KLTSMSProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLTSMSProxy.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +217,7 @@
 				368E27021B4CC4B8001672CE /* Weibo */,
 				368E27111B4CC4B8001672CE /* Yixin */,
 				368E26EF1B4CC4B8001672CE /* Tencent */,
+				36D82C401B6F423200C9A90D /* SMS */,
 			);
 			path = KTLShareSDK;
 			sourceTree = "<group>";
@@ -307,6 +311,15 @@
 				368E27151B4CC4B8001672CE /* YXApiObject.h */,
 			);
 			path = SDK;
+			sourceTree = "<group>";
+		};
+		36D82C401B6F423200C9A90D /* SMS */ = {
+			isa = PBXGroup;
+			children = (
+				36D82C411B6F423200C9A90D /* KLTSMSProxy.h */,
+				36D82C421B6F423200C9A90D /* KLTSMSProxy.m */,
+			);
+			path = SMS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -419,6 +432,7 @@
 				368E27351B4CC887001672CE /* ViewController.m in Sources */,
 				368E268B1B4CC341001672CE /* main.m in Sources */,
 				368E271A1B4CC4B8001672CE /* KLTQQProxy.m in Sources */,
+				36D82C431B6F423200C9A90D /* KLTSMSProxy.m in Sources */,
 				368E271C1B4CC4B8001672CE /* UIImage+ResizeMagick.m in Sources */,
 				368E271E1B4CC4B8001672CE /* KLTWechatProxy.m in Sources */,
 				368E27181B4CC4B8001672CE /* KLTShareKit.m in Sources */,
@@ -634,6 +648,7 @@
 				368E26AA1B4CC341001672CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		368E26AB1B4CC341001672CE /* Build configuration list for PBXNativeTarget "KLTShareSDKDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -642,6 +657,7 @@
 				368E26AD1B4CC341001672CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

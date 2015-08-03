@@ -14,7 +14,7 @@
 #import "KLTWeiboProxy.h"
 #import "KLTYixinProxy.h"
 #import "KLTQQProxy.h"
-
+#import "KLTSMSProxy.h"
 #endif
 
 

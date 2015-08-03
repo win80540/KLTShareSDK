@@ -21,7 +21,7 @@ extern NSString   * __nonnull  const kYixinSceneTypeKey;
 @end
 
 @interface KLTMediaMessage (Yixin)
-/** @brief 生成微信的多媒体分享内容对象 */
+/** @brief 生成易信的多媒体分享内容对象 */
 - (YXMediaMessage * __nonnull)yixinMessage;
 @end
 
