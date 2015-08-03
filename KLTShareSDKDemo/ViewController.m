@@ -110,6 +110,11 @@
   [self shareMessage:[self generateWebPageMessage] type:kKLTShareTypeQQ];
 }
 
+
+- (IBAction)sharePageToSMS:(id)sender {
+    [self shareMessage:[self generateWebPageMessage] type:kKLTShareTypeSMS];
+}
+
 #pragma mark - Yixin
 
 - (IBAction)shareTextToYixin:(id)sender
