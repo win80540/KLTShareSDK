@@ -172,6 +172,12 @@ NSString * const kTencentQQSceneTypeKey = @"KLTShare_tencent_qq_scene_type";
     return errorMessage;
 }
 
+
+- (void)tencentDidLogin
+{
+  [self.tencentOAuth getUserInfo];
+}
+
 - (void)tencentDidNotLogin:(BOOL)cancelled
 {
   KLTShareCompletedBlock doneBlock = self.block;

@@ -33,26 +33,26 @@
 
 - (IBAction)wechatLoginAction:(UIButton *)sender
 {
-  [self loginWithType:kKLTShareTypeWechat];
+    [self loginWithType:kKLTShareTypeWechat];
 }
 
 - (IBAction)weiboLoginAction:(UIButton *)sender
 {
-  [self loginWithType:kKLTShareTypeWeibo];
+    [self loginWithType:kKLTShareTypeWeibo];
 }
 
 - (IBAction)qqLoginAction:(UIButton *)sender
 {
-  [self loginWithType:kKLTShareTypeQQ];
+    [self loginWithType:kKLTShareTypeQQ];
 }
 
 - (void)loginWithType:(NSString *)type
 {
-  [[KLTShareKit sharedInstance] authWithName:type
-                                completed:^(id result, NSError *error) {
-                                  [self showText:result];
-                                  NSLog(@"error: %@", error);
-                                }];
+    [[KLTShareKit sharedInstance] authWithName:type
+                                     completed:^(id result, NSError *error) {
+                                         [self showText:result];
+                                         NSLog(@"error: %@", error);
+                                     }];
 }
 
 - (IBAction)shareTextToWeiboAction:(id)sender

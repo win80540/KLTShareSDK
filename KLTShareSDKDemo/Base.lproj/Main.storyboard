@@ -196,8 +196,17 @@
                                     <action selector="shareVideoToYixin:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="83c-Rx-dbR"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lIi-8p-V0z">
+                                <rect key="frame" x="16" y="212" width="65" height="30"/>
+                                <state key="normal" title="短信分享">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sharePageToSMS:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ixz-1O-re9"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="返回的信息" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jsl-04-FXA">
-                                <rect key="frame" x="16" y="344" width="568" height="21"/>
+                                <rect key="frame" x="16" y="307" width="568" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -213,7 +222,7 @@
                             <constraint firstItem="0F8-Gg-eLl" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="5Hq-Km-o8e"/>
                             <constraint firstItem="X0D-mG-zoe" firstAttribute="leading" secondItem="t0T-39-vFa" secondAttribute="leading" id="76Q-PU-p8C"/>
                             <constraint firstItem="Hji-kN-YY1" firstAttribute="centerY" secondItem="6T6-Bx-c6S" secondAttribute="centerY" id="78o-Q6-P1Q"/>
-                            <constraint firstItem="Jsl-04-FXA" firstAttribute="top" secondItem="lcy-89-Dli" secondAttribute="bottom" constant="178" id="7i6-ja-iTX"/>
+                            <constraint firstItem="Jsl-04-FXA" firstAttribute="top" secondItem="lcy-89-Dli" secondAttribute="bottom" constant="141" id="7i6-ja-iTX"/>
                             <constraint firstItem="maS-gh-FqR" firstAttribute="top" secondItem="F3R-3j-bOH" secondAttribute="bottom" constant="8" symbolic="YES" id="BIF-Ci-OJs"/>
                             <constraint firstItem="GzD-J0-xcT" firstAttribute="centerY" secondItem="VsZ-6c-uj6" secondAttribute="centerY" id="Caa-rp-p1t"/>
                             <constraint firstItem="maS-gh-FqR" firstAttribute="leading" secondItem="faP-Cd-zus" secondAttribute="leading" id="CuV-2w-3gd"/>
