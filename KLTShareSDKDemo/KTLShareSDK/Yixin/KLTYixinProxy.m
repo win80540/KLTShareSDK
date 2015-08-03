@@ -67,7 +67,31 @@ NSString * const kYixinSceneTypeKey = @"Yixin_scene_type_key";
     [YXApi sendReq:req];
 
 }
+- (void)auth:(KLTShareCompletedBlock __nullable)completedBlock{
+    self.block = completedBlock;
+    if([self isInstalled]  )
+    {
+        if ([YXApi isYXAppSupportOAuth]) {
+            SendOAuthToYXReq *req = [[SendOAuthToYXReq alloc] init];
+            bool result = [YXApi sendReq : req];
+            if (!result) {
+                if(completedBlock)
+                {
+                    NSError *error = [[NSError alloc] initWithDomain:kYixinErrorDomain code:-1024 userInfo:@{NSLocalizedDescriptionKey:@"请求失败"}];
+                    completedBlock(nil,error);
+                }
+            }
+        }else{
+            NSError *error = [[NSError alloc] initWithDomain:kYixinErrorDomain code:-1024 userInfo:@{NSLocalizedDescriptionKey:@"客户端版本不支持"}];
+            completedBlock(nil,error);
+        }
+    }else{
+        NSError *error = [[NSError alloc] initWithDomain:kYixinErrorDomain code:-1024 userInfo:@{NSLocalizedDescriptionKey:@"未安装客户端"}];
+        completedBlock(nil,error);
 
+    }
+    
+}
 
 
 
@@ -103,7 +127,9 @@ NSString * const kYixinSceneTypeKey = @"Yixin_scene_type_key";
             //          NSString *oauthcode = [NSString stringWithFormat:@"code:%@\nstate:%@\nexpireseconds:%lldl", oauthresp.authCode, oauthresp.state, oauthresp.exprieSeonds];
             
         }else{
-            doneBlock(nil,nil);
+            doneBlock(nil, [NSError errorWithDomain:kYixinErrorDomain
+                                               code:resp.code
+                                           userInfo:@{NSLocalizedDescriptionKey: @"微信授权失败"}]);
         }
     }else{
         if (resp.code != kYXRespSuccess) {
@@ -112,10 +138,62 @@ NSString * const kYixinSceneTypeKey = @"Yixin_scene_type_key";
             doneBlock(nil,nil);
         }
     }
-    
-    
 }
+- (void)getYixinUserInfoWithCode:(NSString *)code completed:(KLTShareCompletedBlock)completedBlock
+{
+    [self yixinAuthRequestWithPath:@"oauth/token"
+                             params:@{@"client_id": self.yixinAppId,
+                                      @"client_secret": self.yixinAppSecret,
+                                      @"code": code,
+                                      @"grant_type": @"authorization_code"}
+                          complated:^(NSDictionary *result, NSError *error) {
+                              if (result)
+                              {
+                                  NSString *accessToken = result[@"access_token"];
+                                  if ( accessToken)
+                                  {
+                                      [self yixinAuthRequestWithPath:@"api/userinfo"
+                                                               params:@{@"access_token": accessToken}
+                                                            complated:^(NSDictionary *result, NSError *error) {
+                                                                DTUser *dtUser = nil;
+                                                                if (result[@"unionid"])
+                                                                {
+                                                                    dtUser = [[DTUser alloc] init];
+                                                                    dtUser.uid = [NSString stringWithFormat:@"yixin_%@",result[@"accountId"]];
+                                                                    dtUser.gender = [result[@"sex"] integerValue] == 1 ? @"male" : @"female";
+                                                                    dtUser.nick = result[@"nick"];
+                                                                    dtUser.avatar = result[@"icon"];
+                                                                    dtUser.provider = @"Yixin";
+                                                                    dtUser.rawData = result;
+                                                                }
+                                                                
+                                                                if (completedBlock)
+                                                                {
+                                                                    completedBlock(dtUser, error);
+                                                                }
+                                                            }];
+                                      return;
+                                  }
+                              }
+                              
+                              if (completedBlock)
+                              {
+                                  completedBlock(result, error);
+                              }
+                          }];
+}
+#pragma mark - Http Request
 
+- (void)yixinAuthRequestWithPath:(NSString *)path
+                           params:(NSDictionary *)params
+                        complated:(KLTShareCompletedBlock)completedBlock
+{
+    NSURL *baseURL = [NSURL URLWithString:@"https://open.yixin.im"];
+    [ShareSDKHttp requestWithUrl:[baseURL URLByAppendingPathComponent:path]
+                  mehtod:@"POST"
+                  params:params
+               complated:completedBlock];
+}
 
 @end
 

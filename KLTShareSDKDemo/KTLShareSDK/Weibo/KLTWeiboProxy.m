@@ -43,6 +43,18 @@ NSString * const kKLTShareTypeWeibo = @"KLTShare_weibo";
   self.redirectUrl = configuration[kKLTShareAppRedirectUrlKey];
 }
 
+- (void)auth:(KLTShareCompletedBlock)completedBlock
+{
+  self.block = completedBlock;
+  
+  WBAuthorizeRequest *request = [WBAuthorizeRequest request];
+  request.redirectURI = self.redirectUrl;
+  request.scope = @"all";
+  request.userInfo = @{@"request_from": @"auth"};
+  request.shouldShowWebViewForAuthIfCannotSSO = YES;
+
+  [WeiboSDK sendRequest:request];
+}
 
 - (BOOL)isInstalled
 {
@@ -111,7 +123,13 @@ NSString * const kKLTShareTypeWeibo = @"KLTShare_weibo";
       doneBlock(sendMessageToWeiboResponse.requestUserInfo, nil);
     }
   }
-  
+  else if ([response isKindOfClass:[WBAuthorizeResponse class]])
+  {
+    NSString *token = [(WBAuthorizeResponse *)response accessToken];
+    NSString *userID = [(WBAuthorizeResponse *)response userID];
+    [self updateWeiboToken:token userId:userID];
+    [self getWeiboUserInfoWithUserId:userID accessToken:token completed:doneBlock];
+  }
 }
 
 - (void)updateWeiboToken:(NSString *)token userId:(NSString *)userId
@@ -120,7 +138,33 @@ NSString * const kKLTShareTypeWeibo = @"KLTShare_weibo";
   [[NSUserDefaults standardUserDefaults] setObject:token forKey:kWeiboTokenKey];
 }
 
+- (void)getWeiboUserInfoWithUserId:(NSString *)userId
+                       accessToken:(NSString *)token
+                         completed:(KLTShareCompletedBlock)completedBlock
+{
+  [WBHttpRequest requestForUserProfile:userId
+                       withAccessToken:token
+                    andOtherProperties:nil
+                                 queue:nil
+                 withCompletionHandler:^(WBHttpRequest *httpRequest,  WeiboUser *user, NSError *error) {
+                   DTUser *dtUser = nil;
+                   if (user.userID)
+                   {
+                     dtUser = [[DTUser alloc] init];
+                     dtUser.uid = user.userID;
+                     dtUser.nick = user.screenName;
+                     dtUser.avatar = user.avatarHDUrl;
+                     dtUser.gender = [user.gender isEqualToString:@"m"] ?  @"male" : @"female";
+                     dtUser.provider = @"weibo";
+                     dtUser.rawData = user.originParaDict;
+                   }
 
+                   if (completedBlock)
+                   {
+                     completedBlock(dtUser, error);
+                   }
+                 }];
+}
 
 @end
 
