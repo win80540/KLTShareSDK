@@ -61,15 +61,16 @@ NSString * const kKLTShareTypeSMS = @"KLTShare_SMS";
     switch (result)
     {
         case MessageComposeResultSent:
+            NSLog(@"KTLShareSDK - message sended");
             break;
         case MessageComposeResultCancelled:
-            error = [[NSError alloc] initWithDomain:kSMSErrorDomain code:result userInfo:@{NSLocalizedDescriptionKey:@"text message cancelled"}];
+            NSLog(@"KTLShareSDK -  message cancelled");
             break;
         case MessageComposeResultFailed:
-            error = [[NSError alloc] initWithDomain:kSMSErrorDomain code:result userInfo:@{NSLocalizedDescriptionKey:@"text message failed"}];
+            error = [[NSError alloc] initWithDomain:kSMSErrorDomain code:result userInfo:@{NSLocalizedDescriptionKey: NSLocalizedString(@"KTLShareSDKFailedSMS", nil) }];
             break;
         default:
-            error = [[NSError alloc] initWithDomain:kSMSErrorDomain code:result userInfo:@{NSLocalizedDescriptionKey:@"unknow error occur"}];
+            error = [[NSError alloc] initWithDomain:kSMSErrorDomain code:result userInfo:@{NSLocalizedDescriptionKey:NSLocalizedString(@"KTLShareSDKFailedSMSUnknow", nil) }];
             break;
     }
     if (doneBlock) {
