@@ -22,6 +22,9 @@ NSString * const kKLTShareTypeSMS = @"KLTShare_SMS";
     [super load];
     [[KLTShareKit sharedInstance] registerProxyObject:[self proxy] withName:kKLTShareTypeSMS];
 }
+- (void)auth:(KLTShareCompletedBlock __nullable)completedBlock{
+    return;
+}
 - (void)registerWithConfiguration:(NSDictionary * __nonnull)configuration{
     return;
 }
