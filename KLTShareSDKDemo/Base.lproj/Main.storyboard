@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
@@ -89,12 +88,6 @@
                                     <action selector="shareToWeiboAudioAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="vzC-A8-DGB"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="返回的信息" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jsl-04-FXA">
-                                <rect key="frame" x="16" y="206" width="568" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcy-89-Dli">
                                 <rect key="frame" x="16" y="136" width="58" height="30"/>
                                 <state key="normal" title="QQ 登录">
@@ -203,6 +196,12 @@
                                     <action selector="shareVideoToYixin:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="83c-Rx-dbR"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="返回的信息" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jsl-04-FXA">
+                                <rect key="frame" x="16" y="344" width="568" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -214,7 +213,7 @@
                             <constraint firstItem="0F8-Gg-eLl" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="5Hq-Km-o8e"/>
                             <constraint firstItem="X0D-mG-zoe" firstAttribute="leading" secondItem="t0T-39-vFa" secondAttribute="leading" id="76Q-PU-p8C"/>
                             <constraint firstItem="Hji-kN-YY1" firstAttribute="centerY" secondItem="6T6-Bx-c6S" secondAttribute="centerY" id="78o-Q6-P1Q"/>
-                            <constraint firstItem="Jsl-04-FXA" firstAttribute="top" secondItem="lcy-89-Dli" secondAttribute="bottom" constant="40" id="7i6-ja-iTX"/>
+                            <constraint firstItem="Jsl-04-FXA" firstAttribute="top" secondItem="lcy-89-Dli" secondAttribute="bottom" constant="178" id="7i6-ja-iTX"/>
                             <constraint firstItem="maS-gh-FqR" firstAttribute="top" secondItem="F3R-3j-bOH" secondAttribute="bottom" constant="8" symbolic="YES" id="BIF-Ci-OJs"/>
                             <constraint firstItem="GzD-J0-xcT" firstAttribute="centerY" secondItem="VsZ-6c-uj6" secondAttribute="centerY" id="Caa-rp-p1t"/>
                             <constraint firstItem="maS-gh-FqR" firstAttribute="leading" secondItem="faP-Cd-zus" secondAttribute="leading" id="CuV-2w-3gd"/>
