@@ -219,7 +219,8 @@
 				368E26EF1B4CC4B8001672CE /* Tencent */,
 				36D82C481B6F4C5C00C9A90D /* SMS */,
 			);
-			path = KTLShareSDK;
+			name = KTLShareSDK;
+			path = KLTShareSDK;
 			sourceTree = "<group>";
 		};
 		368E26EF1B4CC4B8001672CE /* Tencent */ = {
@@ -319,8 +320,7 @@
 				36D82C491B6F4C5C00C9A90D /* KLTSMSProxy.h */,
 				36D82C4A1B6F4C5C00C9A90D /* KLTSMSProxy.m */,
 			);
-			name = SMS;
-			path = ../SMS;
+			path = SMS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
