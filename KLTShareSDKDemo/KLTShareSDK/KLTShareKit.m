@@ -2,8 +2,8 @@
 //  KLTShare.m
 //  KLTShare
 //
-//  Created by Cloud Dai on 11/5/15.
-//  Copyright (c) 2015 Cloud Dai. All rights reserved.
+//  Created by 田凯 on 15/8/1.
+//  Copyright (c) 2015年 田凯. All rights reserved.
 //
 
 #import "KLTShareKit.h"
