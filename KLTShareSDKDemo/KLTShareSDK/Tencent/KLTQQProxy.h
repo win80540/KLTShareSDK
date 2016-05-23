@@ -10,8 +10,13 @@
 
 #import "KLTShareKit.h"
 
-#import "TencentOAuth.h"
-#import "QQApiInterface.h"
+#import <TencentOpenAPI/TencentOAuth.h>
+#import <TencentOpenAPI/QQApiInterface.h>
+#import <TencentOpenAPI/TencentApiInterface.h>
+
+
+//#import "TencentOAuth.h"
+//#import "QQApiInterface.h"
 
 extern NSString * __nonnull const kKLTShareTypeQQ;
 extern NSString * __nonnull const kTencentQQSceneTypeKey;

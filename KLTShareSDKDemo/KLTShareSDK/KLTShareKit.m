@@ -149,7 +149,8 @@ static NSString * __nonnull const kKLTShareErrorKeyUnKnowApp = @"未知应用";
 @implementation KLTImageMessage
 - (NSString *)description
 {
-  return [[super description] stringByAppendingFormat:@"image url: %@ \n image data: %@ \n", self.imageUrl, self.imageData];
+//  return [[super description] stringByAppendingFormat:@"image url: %@ \n image data: %@ \n", self.imageUrl, self.imageData];
+    return [[super description] stringByAppendingFormat:@"mage data: %@ \n", self.imageData];
 }
 @end
 

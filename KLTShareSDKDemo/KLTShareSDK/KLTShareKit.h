@@ -159,8 +159,8 @@ typedef void (^KLTShareCompletedBlock)(id __nullable result, NSError * __nullabl
 /** @brief 当分享一张图片时，图片的二进制数据。与 imageUrl 二选一。 推荐使用。 */
 @property (strong, nonatomic, nullable) NSData *imageData;
 
-/** @brief 当分享一张图片时，图片的远程 URL。与 imageData 二选一。 */
-@property (copy, nonatomic, nullable) NSString *imageUrl;
+///** @brief 当分享一张图片时，图片的远程 URL。与 imageData 二选一。 弃用*/
+//@property (copy, nonatomic, nullable) NSString *imageUrl;
 
 @end
 

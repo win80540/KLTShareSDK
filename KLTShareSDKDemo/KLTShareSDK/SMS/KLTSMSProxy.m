@@ -108,7 +108,7 @@ NSString * const kKLTShareTypeSMS = @"KLTShare_SMS";
     KLTSMSMediaMessage *mesage = [KLTSMSMediaMessage message];
     mesage.title = self.title;
     mesage.desc = self.desc;
-    mesage.dataUrl = self.imageUrl;
+//    mesage.dataUrl = self.imageUrl;
     return mesage;
 }
 @end

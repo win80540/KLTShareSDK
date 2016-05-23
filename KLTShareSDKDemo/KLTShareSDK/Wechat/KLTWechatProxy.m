@@ -236,7 +236,6 @@ NSString * const kWechatSceneTypeKey = @"wechat_scene_type_key";
 
   WXImageObject *imageObect = [WXImageObject object];
   imageObect.imageData = self.imageData;
-  imageObect.imageUrl = self.imageUrl;
 
   message.mediaObject = imageObect;
 

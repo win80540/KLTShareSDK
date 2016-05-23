@@ -224,7 +224,7 @@ NSString * const kYixinSceneTypeKey = @"Yixin_scene_type_key";
     {
         YXImageObject *obj = [[YXImageObject alloc] init];
         obj.imageData = self.imageData;
-        obj.imageUrl = self.imageUrl;
+//        obj.imageUrl = self.imageUrl;
         mesage.mediaObject = obj;
     }
     return mesage;
