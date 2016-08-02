@@ -110,6 +110,8 @@
         <string>sinaweibo</string>
         <string>weibosdk</string>
         <string>weibosdk2.5</string>
+        <!--- 易信 -->
+        <string>yixin</string>
 	</array>
 	<key>NSAppTransportSecurity</key>
 	<dict>

@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36448F541D5042C80087E82D /* libYixinSDK_V2.4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36448F511D5042C80087E82D /* libYixinSDK_V2.4.a */; };
 		3669B12F1CF2F51000AF5997 /* KLTQQProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3669B1091CF2F51000AF5997 /* KLTQQProxy.m */; };
 		3669B1331CF2F51000AF5997 /* KLTWechatProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3669B1131CF2F51000AF5997 /* KLTWechatProxy.m */; };
 		3669B1351CF2F51000AF5997 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3669B1151CF2F51000AF5997 /* libWeChatSDK.a */; };
 		3669B1371CF2F51000AF5997 /* KLTWeiboProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3669B11B1CF2F51000AF5997 /* KLTWeiboProxy.m */; };
 		3669B13D1CF2F51000AF5997 /* KLTYixinProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3669B12A1CF2F51000AF5997 /* KLTYixinProxy.m */; };
-		3669B13F1CF2F51000AF5997 /* libYixinSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3669B12C1CF2F51000AF5997 /* libYixinSDK.a */; };
 		3669B1421CF2F55A00AF5997 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3669B1411CF2F55A00AF5997 /* Security.framework */; };
 		3669B1441CF2F59000AF5997 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3669B1431CF2F59000AF5997 /* CoreTelephony.framework */; };
 		3669B1521CF2FB5B00AF5997 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3669B1451CF2FB5B00AF5997 /* libWeiboSDK.a */; };
@@ -39,6 +39,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		36448F511D5042C80087E82D /* libYixinSDK_V2.4.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libYixinSDK_V2.4.a; sourceTree = "<group>"; };
+		36448F521D5042C80087E82D /* YXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXApi.h; sourceTree = "<group>"; };
+		36448F531D5042C80087E82D /* YXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXApiObject.h; sourceTree = "<group>"; };
 		3669B1011CF2F31A00AF5997 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		3669B1081CF2F51000AF5997 /* KLTQQProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLTQQProxy.h; sourceTree = "<group>"; };
 		3669B1091CF2F51000AF5997 /* KLTQQProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLTQQProxy.m; sourceTree = "<group>"; };
@@ -52,9 +55,6 @@
 		3669B11B1CF2F51000AF5997 /* KLTWeiboProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLTWeiboProxy.m; sourceTree = "<group>"; };
 		3669B1291CF2F51000AF5997 /* KLTYixinProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLTYixinProxy.h; sourceTree = "<group>"; };
 		3669B12A1CF2F51000AF5997 /* KLTYixinProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLTYixinProxy.m; sourceTree = "<group>"; };
-		3669B12C1CF2F51000AF5997 /* libYixinSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libYixinSDK.a; sourceTree = "<group>"; };
-		3669B12D1CF2F51000AF5997 /* YXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXApi.h; sourceTree = "<group>"; };
-		3669B12E1CF2F51000AF5997 /* YXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXApiObject.h; sourceTree = "<group>"; };
 		3669B1411CF2F55A00AF5997 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		3669B1431CF2F59000AF5997 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		3669B1451CF2FB5B00AF5997 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
@@ -111,9 +111,9 @@
 				3669B1521CF2FB5B00AF5997 /* libWeiboSDK.a in Frameworks */,
 				3669B1421CF2F55A00AF5997 /* Security.framework in Frameworks */,
 				3669B1351CF2F51000AF5997 /* libWeChatSDK.a in Frameworks */,
+				36448F541D5042C80087E82D /* libYixinSDK_V2.4.a in Frameworks */,
 				368E273A1B4CD786001672CE /* ImageIO.framework in Frameworks */,
 				368E272B1B4CC814001672CE /* libz.dylib in Frameworks */,
-				3669B13F1CF2F51000AF5997 /* libYixinSDK.a in Frameworks */,
 				368E27291B4CC7CF001672CE /* libc++.dylib in Frameworks */,
 				3669B1621CF3022500AF5997 /* TencentOpenAPI.framework in Frameworks */,
 				368E27271B4CC7B2001672CE /* SystemConfiguration.framework in Frameworks */,
@@ -207,9 +207,9 @@
 		3669B12B1CF2F51000AF5997 /* SDK */ = {
 			isa = PBXGroup;
 			children = (
-				3669B12C1CF2F51000AF5997 /* libYixinSDK.a */,
-				3669B12D1CF2F51000AF5997 /* YXApi.h */,
-				3669B12E1CF2F51000AF5997 /* YXApiObject.h */,
+				36448F511D5042C80087E82D /* libYixinSDK_V2.4.a */,
+				36448F521D5042C80087E82D /* YXApi.h */,
+				36448F531D5042C80087E82D /* YXApiObject.h */,
 			);
 			path = SDK;
 			sourceTree = "<group>";

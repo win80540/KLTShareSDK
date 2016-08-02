@@ -207,7 +207,7 @@ NSString * const kYixinSceneTypeKey = @"Yixin_scene_type_key";
 {
     YXMediaMessage *mesage = [YXMediaMessage message];
     mesage.title = self.title;
-    mesage.description = self.desc;
+    mesage.msgDescription = self.desc;
     mesage.thumbData = UIImageJPEGRepresentation([self.thumbnailableImage resizedImageByWidth:200], 0.75);
 
     return mesage;
@@ -219,7 +219,7 @@ NSString * const kYixinSceneTypeKey = @"Yixin_scene_type_key";
 {
     YXMediaMessage *mesage = [YXMediaMessage message];
     mesage.title = self.title;
-    mesage.description = self.desc;
+    mesage.msgDescription = self.desc;
     mesage.thumbData = UIImageJPEGRepresentation([self.thumbnailableImage resizedImageByWidth:200], 0.75);
     {
         YXImageObject *obj = [[YXImageObject alloc] init];
@@ -236,7 +236,7 @@ NSString * const kYixinSceneTypeKey = @"Yixin_scene_type_key";
 {
     YXMediaMessage *mesage = [YXMediaMessage message];
     mesage.title = self.title;
-    mesage.description = self.desc;
+    mesage.msgDescription = self.desc;
     mesage.thumbData = UIImageJPEGRepresentation([self.thumbnailableImage resizedImageByWidth:200], 0.75);
     {
         YXMusicObject *obj = [[YXMusicObject alloc] init];
@@ -253,7 +253,7 @@ NSString * const kYixinSceneTypeKey = @"Yixin_scene_type_key";
 {
     YXMediaMessage *mesage = [YXMediaMessage message];
     mesage.title = self.title;
-    mesage.description = self.desc;
+    mesage.msgDescription = self.desc;
     mesage.thumbData = UIImageJPEGRepresentation([self.thumbnailableImage resizedImageByWidth:200], 0.75);
     {
         YXVideoObject *obj = [[YXVideoObject alloc] init];
@@ -270,7 +270,7 @@ NSString * const kYixinSceneTypeKey = @"Yixin_scene_type_key";
 {
     YXMediaMessage *mesage = [YXMediaMessage message];
     mesage.title = self.title;
-    mesage.description = self.desc;
+    mesage.msgDescription = self.desc;
     mesage.thumbData = UIImageJPEGRepresentation([self.thumbnailableImage resizedImageByWidth:200], 0.75);
     {
         YXWebpageObject *obj = [[YXWebpageObject alloc] init];
@@ -288,7 +288,7 @@ NSString * const kYixinSceneTypeKey = @"Yixin_scene_type_key";
 {
     YXMediaMessage *mesage = [YXMediaMessage message];
     mesage.title = self.title;
-    mesage.description = self.desc;
+    mesage.msgDescription = self.desc;
     mesage.thumbData = UIImageJPEGRepresentation([self.thumbnailableImage resizedImageByWidth:200], 0.75);
     {
         YXAppExtendObject *obj = [[YXAppExtendObject alloc] init];
