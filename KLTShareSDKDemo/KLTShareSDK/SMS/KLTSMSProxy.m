@@ -42,15 +42,19 @@ NSString * const kKLTShareTypeSMS = @"KLTShare_SMS";
     }
     [self sharedMsg:selfMsg];
 }
-- (void)sharedMsg:(KLTSMSMediaMessage *)message{
-    MFMessageComposeViewController *mc=[[MFMessageComposeViewController alloc] init];
+- (void)sharedMsg:(KLTSMSMediaMessage *)message {
+    MFMessageComposeViewController *mc = [[MFMessageComposeViewController alloc] init];
     //设置委托
     mc.messageComposeDelegate=self;
     //短信内容
     mc.body=[NSString stringWithFormat:@"%@\n%@\n%@",message.title,message.desc,message.dataUrl];
     //设置短信收件方
     //mc.recipients=[NSArray arrayWithObject:@"10010"];
-    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:mc animated:YES completion:nil];
+    UIViewController *vc = [UIApplication sharedApplication].keyWindow.rootViewController;
+    while (vc.presentedViewController) {
+        vc = vc.presentedViewController;
+    }
+    [vc presentViewController:mc animated:YES completion:nil];
 }
 
 //短信发送的处理结果
