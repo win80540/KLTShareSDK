@@ -29,7 +29,7 @@ NSString * const kKLTShareTypeSMS = @"KLTShare_SMS";
     return;
 }
 - (BOOL)handleOpenURL:(NSURL * __nullable)url{
-    return YES;
+    return NO;
 }
 - (BOOL)isInstalled{
     return [MFMessageComposeViewController canSendText];
